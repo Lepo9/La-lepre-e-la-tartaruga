@@ -3,7 +3,4 @@ Garoffoli = RapidAccess - Leporati = Lepo0 - Betella = Matteobetella - Ragnoli =
 
 
 **Changelog**
-
-*FORMATO: DATA - UTENTE - CAMBIAMENTI*
-
-30/11/20 - GAROFFOLI - CREAZIONE README.MD 
+Controllare i file del Changelog.
