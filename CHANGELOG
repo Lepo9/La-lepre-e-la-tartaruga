@@ -1,3 +1,62 @@
 ## Changelog
-
 Qua si scrive i cambiamenti al codice.
+
+*********************************
+30/11/2020
+
+
+Prima impostazione del lavoro in base ai punti da seguire per importanza:
+
+gestione gioco
+  randomizzatore delle mosse
+  puntate
+  turni
+parte grafica in console
+extra
+visulazizzazione grafica
+
+
+Suddivisione scrittura
+
+Funzioni:
+
+int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
+  //restituisce in caso di vittoria il numero dei gettoni vinti
+
+int spazi (int n) //stampa un numero n ddi spazi (utile nel disegno)
+
+int spostamento_tarta () //restituisce quanti passi fa la tartaruga
+int spostamento_lepre () //restituisce quanti passi fa la lepre
+
+int disegno_tarta (float avanzamento_tarta) 
+//in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento
+int disegno_lepre (float avanzamento_lepre) 
+//in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento
+
+
+Scrittura del main
+  gestione delle molteplici corse tramite cicli e variabili
+  gestione del denaro tramite calcolo_vincita 
+  gestione visualizzazzione tramite disegno_tarta e disegno_lepre
+
+
+Proposta extra:
+prima che una delle 2 arrivi a metà percorso si può aggiornare la puntata
+puntando altri gettoni.
+
+Funzionamento:
+Benvenuto
+Inserimento credito
+ciclo 
+{
+  Stampa della tartaruga e lepre
+  Puntata
+  Controllo credito
+  Animazione
+  Vittoria e quanto si ha vinto
+  Punteggio (vittorie e sconfitte)
+  Si vuole rigiocare?
+}
+
+*********************************
+
