@@ -1,4 +1,9 @@
-# La-lepre-e-la-tartaruga
-Progetto natalizio in gruppo con Betella, Garoffoli e Ragnoli
+# LAVORO DI GRUPPO
+Garoffoli = RapidAccess - Leporati = Lepo0 - Betella = Matteobetella - Ragnoli = DanyRagno00
 
-Mettete qui chi modifica cosa e le righe.
+
+**Changelog**
+
+*FORMATO: DATA - UTENTE - CAMBIAMENTI*
+
+30/11/20 - GAROFFOLI - CREAZIONE README.MD 
