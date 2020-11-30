@@ -1,5 +1,8 @@
 # LAVORO DI GRUPPO
-Garoffoli = RapidAccess - Leporati = Lepo0 - Betella = Matteobetella - Ragnoli = DanyRagno00
+Garoffoli = RapidAccess
+Leporati = Lepo9 
+Betella = Matteobetella
+Ragnoli = DanyRagno00
 
 
 **Changelog**
