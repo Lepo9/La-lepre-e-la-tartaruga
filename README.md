@@ -3,4 +3,13 @@ Garoffoli = RapidAccess - Leporati = Lepo0 - Betella = Matteobetella - Ragnoli =
 
 
 **Changelog**
+
 Controllare i file del Changelog.
+
+**Legenda**
+
+SRC - CODICE SORGENTE DA CONSEGNARE
+
+EXP_SRC - CODICE SORGENTE SPERIMENTALE (CODICE PROVVISORIO)
+
+DOC - TESTO ORIGINALE
