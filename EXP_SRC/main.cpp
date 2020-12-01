@@ -24,6 +24,18 @@ bool positivo (int n)
         return false;
 }
 
+
+int spazi (int n)
+{
+    for (i = 0; i < n; i ++)
+  {
+     cout << " ";
+  }
+return 0;
+}
+
+
+
 int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
 {
     //FLAG_SCOMMESSA (1 LEPRE - 0 TARTARUGA)
