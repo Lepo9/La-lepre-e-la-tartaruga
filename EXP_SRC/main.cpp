@@ -8,7 +8,6 @@ using namespace std;
 //Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
 //Revisione 0.2
 
-
 //positivo assume valore true se il numero è postivo altrimenti false
 bool positivo (int n)
 {
