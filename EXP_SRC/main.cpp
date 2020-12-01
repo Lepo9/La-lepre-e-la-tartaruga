@@ -6,7 +6,7 @@ using namespace std;
 //Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
 //Revisione 0.1
 
-
+//Funzione per controllare se il credito è sufficente per la puntata
 bool credito_sufficiente (int credito, int puntata)
 {
     if (puntata >= credito)
@@ -15,7 +15,7 @@ bool credito_sufficiente (int credito, int puntata)
         return false; //Il credito non è sufficiente
 }
 
-
+//Controlla se il numero è postivo
 bool positivo (int n)
 {
     if (n>=0)
