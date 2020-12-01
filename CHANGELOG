@@ -4,7 +4,26 @@ Qua si scrive i cambiamenti al codice.
 *********************************
 30/11/2020
 
-ciao
+Definizione delle funzioni da scrivere
 
 *********************************
+01/12/2020
 
+uptate 0.2
+
+Aggiustamento e commento delle funzioni:
+bool positivo (int n)
+int spostamento_tarta ()
+
+Aggiunta fuori dal main di:
+#include <ctime>
+#include <cstdlib>
+
+Aggiunta a inizio main:
+srand (time(NULL));
+
+Da revisionare:
+bool credito_sufficiente (int credito, int puntata)
+int spazi (int n)
+
+*********************************
