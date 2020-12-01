@@ -1,3 +1,8 @@
+bool positivo (int n) 
+//true se un numero è  positivo
+
+bool credito_sufficiente (int n) 
+//true se il credito è sufficiente
 
 int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
   //restituisce in caso di vittoria il numero dei gettoni vinti
