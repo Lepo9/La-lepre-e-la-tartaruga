@@ -1,1 +1,16 @@
 
+int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
+  //restituisce in caso di vittoria il numero dei gettoni vinti
+
+int spazi (int n) 
+  //stampa un numero n ddi spazi (utile nel disegno)
+
+int spostamento_tarta () 
+  //restituisce quanti passi fa la tartaruga
+int spostamento_lepre () 
+  //restituisce quanti passi fa la lepre
+
+int disegno_tarta (int avanzamento_tarta) 
+  //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
+int disegno_lepre (int avanzamento_lepre
+  //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
