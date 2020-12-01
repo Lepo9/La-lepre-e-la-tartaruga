@@ -86,9 +86,26 @@ bool credito_sufficiente (int credito, int puntata)
 //true se il credito è sufficiente
 
 Suddivisione lavoro di oggi:
-Leporati
-Betella
-Garoffoli
-Ragnoli
+Leporati: Revisione e scrittura funzione   int spostamento_tarta ()
+Betella: lavoro con Ragnoli causa pc 
+Garoffoli: Revisione indentazione e revisione generale  e aiuto dei compagni
+Ragnoli: lavoro con Betella
+
+
+Funzioni scritte oggi:
+
+bool positivo (int n)
+int spostamento_tarta ()
+
+Funzioni ancora da revisionare:
+bool credito_sufficiente (int credito, int puntata)
+int spazi (int n)
+
+Aggiunta fuori dal main di:
+#include <ctime>
+#include <cstdlib>
+
+Aggiunta a inizio main:
+srand (time(NULL));
 
 *********************************
