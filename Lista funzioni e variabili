@@ -1,6 +1,7 @@
 bool positivo (int n)
 //true se un numero è  positivo
 
+
 int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
   //restituisce in caso di vittoria il numero dei gettoni vinti
 
@@ -16,3 +17,8 @@ int disegno_tarta (int avanzamento_tarta)
   //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
 int disegno_lepre (int avanzamento_lepre
   //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
+
+Già scritte:
+
+bool credito_sufficiente (int credito, int puntata) 
+//true se il credito è sufficiente
