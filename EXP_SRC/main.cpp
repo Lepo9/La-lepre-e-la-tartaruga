@@ -24,6 +24,14 @@ bool positivo (int n)
         return false;
 }
 
+int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
+{
+    //FLAG_SCOMMESSA (1 LEPRE - 0 TARTARUGA)
+    //FLAG_VINCITORE (1 HA VINTO - 0 HA PERSO)
+    //GETTONI_PUNTATI (NUMERO GETTONI)
+    //WIP IN PROGRESS 01/12/2020 10:51 <-- GAROFFOLI
+    
+}
 
 int main()
 {
