@@ -1,10 +1,34 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
 //Progetto Informatica
 //Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
-//Revisione 0.1
+//Revisione 0.2
+
+
+//positivo assume valore true se il numero è postivo altrimenti false
+bool positivo (int n)
+{
+    if (n>0)    //controllo se n è positivo
+        return true;
+    else 
+        return false;
+}
+
+
+//Funzione per stampare i numeri di spazi (utile nel disegno)
+int spazi (int n)
+{
+    for (int i = 0; i < n; i ++) //numero giri = n
+  {
+     cout << " ";
+  }
+return 0;
+}
+
 
 //Funzione per controllare se il credito è sufficente per la puntata
 bool credito_sufficiente (int credito, int puntata)
@@ -15,38 +39,19 @@ bool credito_sufficiente (int credito, int puntata)
         return false; //Il credito non è sufficiente
 }
 
-//Controlla se il numero è postivo
-bool positivo (int n)
-{
-    if (n>0)
-        return true;
-    else 
-        return false;
-}
 
-
-//Funzione per stampare i numeri di spazi (utile nel disegno)
-int spazi (int n)
-{
-    for (i = 0; i < n; i ++)
-  {
-     cout << " ";
-  }
-return 0;
-}
-
-int spostamento_tarta () 
+int spostamento_tarta ()
 {
     int n;  //variabile di appoggio
-    
-    n = rand () % 10 + 1    //genera un numero da 1 a 10
-    
+
+    n = rand () % 10 + 1;    //genera un numero da 1 a 10
+
     if (n <= 5)         //5/10 possibilità sono il 50%
-        return 3        //arrancata rapida
+        return 3;        //arrancata rapida
     else if (n <= 7)    //2/10 possibilità sono il 20%
-        return -6       //scivolone
+        return -6;       //scivolone
     else                //(10-5-2)/10 possibilità sono il 30%
-        return 1        //arrancata lenta
+        return 1;        //arrancata lenta
 }
 
 int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
@@ -60,6 +65,6 @@ int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
 
 int main()
 {
-
+    srand (time(NULL));
     return 0;
 }
