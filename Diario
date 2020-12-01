@@ -80,6 +80,10 @@ Funzioni aggiunte:
 bool positivo (int n) //true se un numero è  positivo
 bool credito_sufficiente (int n) //true se il credito è sufficiente
 
+Modifica funzione:
+
+bool credito_sufficiente (int credito, int puntata) 
+//true se il credito è sufficiente
 
 Suddivisione lavoro di oggi:
 Leporati
