@@ -1,7 +1,7 @@
 bool positivo (int n) 
 //true se un numero è  positivo
 
-bool credito_sufficiente (int n) 
+bool credito_sufficiente (int credito, int puntata) 
 //true se il credito è sufficiente
 
 int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
