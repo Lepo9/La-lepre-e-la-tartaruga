@@ -9,7 +9,7 @@ using namespace std;
 //Funzione per controllare se il credito è sufficente per la puntata
 bool credito_sufficiente (int credito, int puntata)
 {
-    if (puntata >= credito)
+    if (credito >=puntata)
         return true; //Il credito è sufficiente
     else
         return false; //Il credito non è sufficiente
@@ -18,7 +18,7 @@ bool credito_sufficiente (int credito, int puntata)
 //Controlla se il numero è postivo
 bool positivo (int n)
 {
-    if (n>=0)
+    if (n>0)
         return true;
     else 
         return false;
