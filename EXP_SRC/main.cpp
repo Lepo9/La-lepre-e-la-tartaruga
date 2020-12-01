@@ -25,6 +25,7 @@ bool positivo (int n)
 }
 
 
+//Funzione per stampare i numeri di spazi (utile nel disegno)
 int spazi (int n)
 {
     for (i = 0; i < n; i ++)
@@ -33,8 +34,6 @@ int spazi (int n)
   }
 return 0;
 }
-
-
 
 int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
 {
