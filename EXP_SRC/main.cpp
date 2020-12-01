@@ -2,18 +2,22 @@
 
 using namespace std;
 
-bool credito_sufficiente (int puntata)
-{
-   int credito = 20;
-   if (puntata >= credito)
-      return true;
-   else
-      return false;
-}
+//Progetto Informatica
+//Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
+//Revisione 0.1
 
+bool credito_sufficiente(int credito, int puntata)
+{
+
+    if (puntata >= credito)
+        return true;
+    else
+        return false;
+}
 
 
 int main()
 {
-return 0;
+
+ return 0;
 }
