@@ -1,4 +1,4 @@
-bool positivo (int n)
+bool positivo (int n) //completata
 //true se un numero è  positivo
 
 
