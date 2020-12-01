@@ -35,6 +35,20 @@ int spazi (int n)
 return 0;
 }
 
+int spostamento_tarta () 
+{
+    int n;  //variabile di appoggio
+    
+    n = rand () % 10 + 1    //genera un numero da 1 a 10
+    
+    if (n <= 5)         //5/10 possibilità sono il 50%
+        return 3        //arrancata rapida
+    else if (n <= 7)    //2/10 possibilità sono il 20%
+        return -6       //scivolone
+    else                //(10-5-2)/10 possibilità sono il 30%
+        return 1        //arrancata lenta
+}
+
 int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
 {
     //FLAG_SCOMMESSA (1 LEPRE - 0 TARTARUGA)
