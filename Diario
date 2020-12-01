@@ -47,6 +47,7 @@ Inserimento credito
 ciclo 
 {
   Stampa della tartaruga e lepre
+  Su chi scommetti?
   Puntata
   Controllo credito
   Animazione
@@ -62,8 +63,8 @@ Per aspettare usare la funzione: get char.
 
 
 Da decidere:
-extra
-passi totali
+extra           Aggiustamento scommessa
+passi totali    50
 
 Leporati
 Betella
@@ -72,3 +73,14 @@ Ragnoli
 
 *********************************
 
+01/12/2020
+
+Funzioni aggiunte:
+
+bool positivo (int n) //true se un numero è  positivo
+bool credito_sufficiente (int n) //true se il credito è sufficiente
+
+Leporati
+Betella
+Garoffoli
+Ragnoli
