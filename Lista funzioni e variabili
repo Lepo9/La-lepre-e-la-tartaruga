@@ -20,14 +20,12 @@ int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore
   //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
   //bool flag_vincitore: chi vince (true=tarta; false=lepre)
 
-
-
-
-
-int disegno_tarta (int avanzamento_tarta) 
-  //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
+//la funzione muove la tartaruga di avanzamento_tarta spazi e 
+//disegna il traguardo i base ai passi totali che la tartaruga deve fare
+void disegno_tarta (int avanzamento_tarta, int passi_totali)
   
-int disegno_lepre (int avanzamento_lepre
+  
+void disegno_lepre (int avanzamento_lepre, int passi_totali)
   //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
 
 
