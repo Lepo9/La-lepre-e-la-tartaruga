@@ -19,9 +19,10 @@ int spostamento_lepre ()
 
 
 
-int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
+int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore) 
   //restituisce in caso di vittoria il numero dei gettoni vinti
-
+  //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
+  //bool flag_vincitore): chi vince (true=tarta; false=lepre)
 
 int disegno_tarta (int avanzamento_tarta) 
   //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
