@@ -132,5 +132,9 @@ int spostamento_lepre ()
 
 int gettoni_vinti()
 
+
 Modifica e scrittura della funzione:
+
 void disegno_tarta (int avanzamento_tarta, int passi_totali)
+//la funzione muove la tartaruga di avanzamento_tarta spazi e 
+//disegna il traguardo i base ai passi totali che la tartaruga deve fare
