@@ -82,19 +82,31 @@ int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore
     return 0;  //altrimenti non vinciamo niente
 }
 
-//la funzione muove la tartaruga di avanzamento_tarta spazi
-void disegno_tarta (int avanzamento_tarta)
+//la funzione muove la tartaruga di avanzamento_tarta spazi e 
+//disegna il traguardo i base ai passi totali che la tartaruga deve fare
+void disegno_tarta (int avanzamento_tarta, int passi_totali)
 {
-    spazi (avanzamento_tarta);              //stampa un numero di spazi avanzamento_tarta
-    cout << "  _____     ____" << endl;     //stampa il primo livello della tarta
+    int spazi_dopo = passi_totali - avanzamento_tarta;  //trovo a quanti passi dista il traguardo
+    spazi (avanzamento_tarta);      //sfalsa la tarta di avanzamento_tarta spazi
+    cout << "  _____     ____  ";   //stampa il primo livello della tartaruga
+    spazi (spazi_dopo);             //stampa gli spazi che mancano per raggiungere il traguardo
+    cout << "x" << endl;            //stampa il carattere del traguardo e va a capo
+    spazi (avanzamento_tarta);      
+    cout << " /      \\  |  o | ";  //secondo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_tarta);      
+    cout << "|        |/ ___\\| ";  //terzo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
     spazi (avanzamento_tarta);
-    cout << " /      \\  |  o |" << endl;   //stampa il secondo livello della tarta
+    cout << "|_________/       ";   //quarto livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
     spazi (avanzamento_tarta);
-    cout << "|        |/ ___\\|" << endl;   //stampa il terzo livello della tarta
-    spazi (avanzamento_tarta);
-    cout << "|_________/" << endl;          //stampa il quarto livello della tarta
-    spazi (avanzamento_tarta);
-    cout << "|_|_| |_|_|" << endl;          //stampa il quinto livello della tarta
+    cout << "|_|_| |_|_|       ";   //quinto livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
 }
 
 
