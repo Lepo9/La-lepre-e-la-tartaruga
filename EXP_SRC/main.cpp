@@ -109,6 +109,37 @@ void disegno_tarta (int avanzamento_tarta, int passi_totali)
     cout << "x" << endl;
 }
 
+void disegno_lepre (int avanzamento_lepre, int passi_totali)
+{
+    int spazi_dopo = passi_totali - avanzamento_lepre;  //trovo a quanti passi dista il traguardo
+    spazi (avanzamento_lepre);      //sfalsa la lepre di avanzamento_lepre spazi
+    cout << "        /\\ /|    ";   //stampa il primo livello della lepre
+    spazi (spazi_dopo);             //stampa gli spazi che mancano per raggiungere il traguardo
+    cout << "x" << endl;            //stampa il carattere del traguardo e va a capo
+    spazi (avanzamento_lepre);
+    cout << "       |||| |     ";  //secondo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "        \\| \\    ";  //terzo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "  /    \\  ==>X<==";   //quarto livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "/|      |   /     ";   //quinto livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "\\|     /__| |    ";   //sesto livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "  \\_____\\ \\__\\ ";   //settimo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
 
 int main()
 {
