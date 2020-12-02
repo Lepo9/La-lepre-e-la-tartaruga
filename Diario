@@ -116,9 +116,15 @@ Modifica delle funzioni:
 
 bool credito_sufficiente (int credito, int puntata)
 //aggiustamento indentazione, funzionamento e commento
-//la funzione restituisce se il credito è sufficiente altrimenti false
+//la funzione restituisce true se il credito è sufficiente altrimenti false
 
 int spazi (int n)
 //dato che non ha senso che venga restiutito un valore viene cambiata in
 void spazi (int n)
 //la funzione stampa un numero di spazi n
+
+
+Scrittura delle funzioni:
+int spostamento_lepre () 
+//la funzione genera un numero corrispondente al numero di passi che la 
+//lepre deve fare tenendo conto delle probabilità
