@@ -27,3 +27,11 @@ bool credito_sufficiente (int credito, int puntata)
 int spazi (int n)
 
 *********************************
+
+02/12/2020
+
+update 0.3
+
+Revisione delle funzioni: 
+bool credito_sufficiente (int credito, int puntata)
+int spazi (int n) --> void spazi (int n)
