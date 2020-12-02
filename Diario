@@ -109,3 +109,16 @@ Aggiunta a inizio main:
 srand (time(NULL));
 
 *********************************
+
+02/12/2020
+
+Modifica delle funzioni: 
+
+bool credito_sufficiente (int credito, int puntata)
+//aggiustamento indentazione, funzionamento e commento
+//la funzione restituisce se il credito è sufficiente altrimenti false
+
+int spazi (int n)
+//dato che non ha senso che venga restiutito un valore viene cambiata in
+void spazi (int n)
+//la funzione stampa un numero di spazi n
