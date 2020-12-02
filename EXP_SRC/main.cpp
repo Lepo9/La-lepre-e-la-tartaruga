@@ -73,13 +73,15 @@ int spostamento_lepre ()
 }
     
     
-int gettoni_vinti(int gettoni_puntati, int flag_scommessa, int flag_vincitore)
+int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore) 
+  //restituisce in caso di vittoria il numero dei gettoni vinti
+  //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
+  //bool flag_vincitore): chi vince (true=tarta; false=lepre)
 {
-    //FLAG_SCOMMESSA (1 LEPRE - 0 TARTARUGA)
-    //FLAG_VINCITORE (1 HA VINTO - 0 HA PERSO)
-    //GETTONI_PUNTATI (NUMERO GETTONI)
-    //WIP IN PROGRESS 01/12/2020 10:51 <-- GAROFFOLI
-    
+ if(flag_vincitore == true && flag_scomessa == true)
+  gettoni_puntati = gettoni_puntati * 2;
+else if(flag_vincitore == false && flag_scommessa == false)
+  gettoni_puntati = gettoni_puntati * 2;
 }
 
 int main()
