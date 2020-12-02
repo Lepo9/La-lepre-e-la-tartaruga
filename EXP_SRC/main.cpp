@@ -77,7 +77,7 @@ int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore
   //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
   //bool flag_vincitore: chi vince (true=tarta; false=lepre)
 {
-    if(flag_vincitore == flag_scomessa) //se il vincitore è lo stesso di chi abbiamo puntato
+    if(flag_vincitore == flag_scommessa) //se il vincitore è lo stesso di chi abbiamo puntato
         return gettoni_puntati * 2;     //vinciamo il doppio dei gettoni
     return 0;  //altrimenti non vinciamo niente
 }
@@ -125,21 +125,26 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali)
     spazi (spazi_dopo);
     cout << "x" << endl;
     spazi (avanzamento_lepre);
-    cout << "  /    \\  ==>X<==";   //quarto livello
+    cout << "    _ _ /  @ @    ";   //quarto livello
     spazi (spazi_dopo);
     cout << "x" << endl;
     spazi (avanzamento_lepre);
-    cout << "/|      |   /     ";   //quinto livello
+    cout << "  /    \\  ==>X<==";   //quinto livello
     spazi (spazi_dopo);
     cout << "x" << endl;
     spazi (avanzamento_lepre);
-    cout << "\\|     /__| |    ";   //sesto livello
+    cout << "/|      |   /     ";   //sesto livello
     spazi (spazi_dopo);
     cout << "x" << endl;
     spazi (avanzamento_lepre);
-    cout << "  \\_____\\ \\__\\ ";   //settimo livello
+    cout << "\\|     /__| |    ";   //settimo livello
     spazi (spazi_dopo);
     cout << "x" << endl;
+    spazi (avanzamento_lepre);
+    cout << "  \\_____\\ \\__\\ ";   //ottavo livello
+    spazi (spazi_dopo);
+    cout << "x" << endl;
+}
 
 int main()
 {
