@@ -38,3 +38,4 @@ int spazi (int n) --> void spazi (int n)
 
 Scrittura delle funzioni:
 int spostamento_lepre () 
+
