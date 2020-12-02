@@ -35,3 +35,6 @@ update 0.3
 Revisione delle funzioni: 
 bool credito_sufficiente (int credito, int puntata)
 int spazi (int n) --> void spazi (int n)
+
+Scrittura delle funzioni:
+int spostamento_lepre () 
