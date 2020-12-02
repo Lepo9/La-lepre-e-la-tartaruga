@@ -82,6 +82,22 @@ int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore
     return 0;  //altrimenti non vinciamo niente
 }
 
+//la funzione muove la tartaruga di avanzamento_tarta spazi
+void disegno_tarta (int avanzamento_tarta)
+{
+    spazi (avanzamento_tarta);              //stampa un numero di spazi avanzamento_tarta
+    cout << "  _____     ____" << endl;     //stampa il primo livello della tarta
+    spazi (avanzamento_tarta);
+    cout << " /      \\  |  o |" << endl;   //stampa il secondo livello della tarta
+    spazi (avanzamento_tarta);
+    cout << "|        |/ ___\\|" << endl;   //stampa il terzo livello della tarta
+    spazi (avanzamento_tarta);
+    cout << "|_________/" << endl;          //stampa il quarto livello della tarta
+    spazi (avanzamento_tarta);
+    cout << "|_|_| |_|_|" << endl;          //stampa il quinto livello della tarta
+}
+
+
 int main()
 {
     srand (time(NULL));
