@@ -128,3 +128,4 @@ Scrittura delle funzioni:
 int spostamento_lepre () 
 //la funzione genera un numero corrispondente al numero di passi che la 
 //lepre deve fare tenendo conto delle probabilità
+int gettoni_vinti()
