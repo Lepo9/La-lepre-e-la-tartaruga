@@ -39,5 +39,4 @@ int spazi (int n) --> void spazi (int n)
 Scrittura delle funzioni:
 int spostamento_lepre () 
 int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore) 
-
-
+void disegno_tarta (int avanzamento_tarta, int passi_totali)
