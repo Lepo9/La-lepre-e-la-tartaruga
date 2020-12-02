@@ -141,7 +141,7 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali)
     spazi (spazi_dopo);
     cout << "x" << endl;
     spazi (avanzamento_lepre);
-    cout << "  \\_____\\ \\__\\     ";   //ottavo livello
+    cout << "  \\_____\\ \\__\\    ";   //ottavo livello
     spazi (spazi_dopo);
     cout << "x" << endl;
 }
