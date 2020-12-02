@@ -64,7 +64,7 @@ int spostamento_lepre ()
         return 0;       //  dormita
     else if (n <= 4)    //  (4-2)/10 possibilità sono il 20%
         return 9;       //  salto lungo
-    else if (n = 5)     //  1/10 possibilità sono il 10%
+    else if (n == 5)     //  1/10 possibilità sono il 10%
         return -12;     //  scivolone lungo
     else if (n <= 8)    //  (8-5)/10 possibilità sono il 30%
         return 1;       //  salto corto
