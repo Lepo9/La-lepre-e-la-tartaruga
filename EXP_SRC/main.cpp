@@ -86,7 +86,7 @@ int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore
 //disegna il traguardo i base ai passi totali che la tartaruga deve fare
 void disegno_tarta (int avanzamento_tarta, int passi_totali)
 {
-    int spazi_dopo = passi_totali - avanzamento_tarta;  //trovo a quanti passi dista il traguardo
+    int spazi_dopo = passi_totali - avanzamento_tarta - 1;  //trovo a quanti passi dista il traguardo
     spazi (avanzamento_tarta);      //sfalsa la tarta di avanzamento_tarta spazi
     cout << "  _____     ____  ";   //stampa il primo livello della tartaruga
     spazi (spazi_dopo);             //stampa gli spazi che mancano per raggiungere il traguardo
@@ -111,7 +111,7 @@ void disegno_tarta (int avanzamento_tarta, int passi_totali)
 
 void disegno_lepre (int avanzamento_lepre, int passi_totali)
 {
-    int spazi_dopo = passi_totali - avanzamento_lepre;  //trovo a quanti passi dista il traguardo
+    int spazi_dopo = passi_totali - avanzamento_lepre - 1;  //trovo a quanti passi dista il traguardo
     spazi (avanzamento_lepre);      //sfalsa la lepre di avanzamento_lepre spazi
     cout << "        /\\ /|     ";   //stampa il primo livello della lepre
     spazi (spazi_dopo);             //stampa gli spazi che mancano per raggiungere il traguardo
