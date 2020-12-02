@@ -1,24 +1,32 @@
-bool positivo (int n) //completata
-//true se un numero è  positivo
+bool positivo (int n)
+//se positivo restituisce valore true, se il numero è postivo altrimenti false
+
+void spazi (int n)
+//la funzione stampa un numero di spazi n (utile nel disegno)
+
+bool credito_sufficiente (int credito, int puntata)
+//la funzione restituisce true se il credito è sufficiente altrimenti false
+
+int spostamento_tarta ()
+//la funzione genera un numero corrispondente al numero di passi che la 
+//tartaruga deve fare tenendo conto delle probabilità
+
+int spostamento_lepre () 
+//la funzione genera un numero corrispondente al numero di passi che la 
+//lepre deve fare tenendo conto delle probabilit
+
+
+
 
 
 int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
   //restituisce in caso di vittoria il numero dei gettoni vinti
 
-int spazi (int n) 
-  //stampa un numero n ddi spazi (utile nel disegno)
-
-int spostamento_tarta () 
-  //restituisce quanti passi fa la tartaruga
-int spostamento_lepre () 
-  //restituisce quanti passi fa la lepre
 
 int disegno_tarta (int avanzamento_tarta) 
   //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
+  
 int disegno_lepre (int avanzamento_lepre
   //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
 
-Già scritte:
 
-bool credito_sufficiente (int credito, int puntata) 
-//true se il credito è sufficiente
