@@ -72,16 +72,14 @@ int spostamento_lepre ()
         return -2;      //  scivolone corto
 }
     
-    
+//la funzione restuisce i gettoni vinti   
 int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore) 
-  //restituisce in caso di vittoria il numero dei gettoni vinti
   //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
-  //bool flag_vincitore): chi vince (true=tarta; false=lepre)
+  //bool flag_vincitore: chi vince (true=tarta; false=lepre)
 {
- if(flag_vincitore == true && flag_scomessa == true)
-  gettoni_puntati = gettoni_puntati * 2;
-else if(flag_vincitore == false && flag_scommessa == false)
-  gettoni_puntati = gettoni_puntati * 2;
+    if(flag_vincitore == flag_scomessa) //se il vincitore è lo stesso di chi abbiamo puntato
+        return gettoni_puntati * 2;     //vinciamo il doppio dei gettoni
+    return 0;  //altrimenti non vinciamo niente
 }
 
 int main()
