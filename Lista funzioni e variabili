@@ -30,10 +30,15 @@ int credito ()
 bool giocare()
 //Per controllare il giocatore vuole continuare il gioco
 
-int passi_lepre()
-int passi_tarta()
-int passi_totali()
-//Variabili per i passi compiuti
-
 void disegno_lepre (int avanzamento_lepre, int passi_totali)
   //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
+
+int credito; //credito totale
+
+bool flag_giocare = true; //flag per riocare
+
+int passi_lepre = 0, passi_tarta = 0; //contatori passi
+
+const int passi_totali = 100; //passi totali
+
+const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
