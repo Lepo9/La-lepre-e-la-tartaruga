@@ -133,7 +133,7 @@ int spostamento_lepre () [Leporati, Ragnoli e Garoffoli]
 int gettoni_vinti() [Garoffoli]
 
 
-Modifica e scrittura della funzione:
+Modifica e scrittura delle funzioni:
 
 void disegno_tarta (int avanzamento_tarta, int passi_totali) [Leporati e Ragnoli]
 //la funzione muove la tartaruga di avanzamento_tarta spazi e 
@@ -143,7 +143,23 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali) [Betella]
 //la funzione muove la lepre di avanzamento_lepre spazi e 
 //disegna il traguardo i base ai passi totali che la lepre deve fare
 
+Sono stati usati i sguenti modelli grafici
+dal sito http://www.ascii-art.de
 
+        /\ /|
+       |||| |
+        \ | \
+    _ _ /  @ @
+  /    \  ==>X<==
+/|      |   /
+\|     /__| |
+  \_____\ \__\
+
+  _____     ____
+ /      \  |  o |
+|        |/ ___\|
+|_________/
+|_|_| |_|_|
 
 *********************************
 
