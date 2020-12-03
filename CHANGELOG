@@ -41,3 +41,23 @@ int spostamento_lepre ()
 int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore) 
 void disegno_tarta (int avanzamento_tarta, int passi_totali)
 void disegno_lepre (int avanzamento_tarta, int passi_totali)
+
+*********************************
+
+03/12/2020
+
+Scrittura struttura generale del main: 
+
+Introduzione delle seguenti stringhe:
+  #include <windows.h>    //libreria per sleep 
+  Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
+  system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+  system ("cls"); //viene richiamata la funzione cls per cancellare la shell
+
+Aggiunta delle variabili:
+    int credito; //credito totale
+    bool flag_giocare = true; //flag per riocare
+    int passi_lepre = 0, passi_tarta = 0; //contatori passi
+    const int passi_totali = 100; //passi totali
+    const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
+    
