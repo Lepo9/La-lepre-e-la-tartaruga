@@ -24,7 +24,11 @@ void disegno_tarta (int avanzamento_tarta, int passi_totali)
 //la funzione muove la tartaruga di avanzamento_tarta spazi e 
 //disegna il traguardo i base ai passi totali che la tartaruga deve fare
 
-  
+int credito ()
+//Credito del gioco
+
+bool giocare()
+//Per controllare il giocatore vuole continuare il gioco
   
 void disegno_lepre (int avanzamento_lepre, int passi_totali)
   //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
