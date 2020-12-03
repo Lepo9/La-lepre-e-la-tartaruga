@@ -166,8 +166,56 @@ dal sito http://www.ascii-art.de
 03/12/2020
 
 Modifica delle decisioni:
+
 I passi totali vengono portati da 50 a 100.
+
 Aggiustamento della scommessa passa da una volta a ogni 
 aggiornamento a 1 volta ogni 15 prima che una delle due 
 concorrenti arrivi a metà percorso.
 
+Ogni frame ogni 350 millisecondi.
+
+
+Modifica della struttura del main:
+Benvenuto.
+Inserimento credito.
+ciclo 
+{
+  Su chi scommetti?
+  Quanto scommetti?
+  Controllo credito.
+  ciclo
+  {
+    Animazione della tartaruga e lepre.
+    Aggiustamento puntata ogni 15 giri prima che si passi la metà.
+    Controllo credito.
+  }
+  Vittoria e quanto si ha vinto.
+  Punteggio (vittorie e sconfitte).
+  Si vuole rigiocare?
+}
+Alla prossima/hai finito il credito.
+
+Scrittura struttura generale del main: [Leporati, Garoffoli, Betella e Ragnoli]
+
+Introduzione delle seguenti stringhe:
+  #include <windows.h>    //libreria per sleep 
+  Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
+  system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+  system ("cls"); //viene richiamata la funzione cls per cancellare la shell
+
+Aggiunta delle variabili:
+    int credito; //credito totale
+    bool flag_giocare = true; //flag per riocare
+    int passi_lepre = 0, passi_tarta = 0; //contatori passi
+    const int passi_totali = 100; //passi totali
+    const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
+    
+Parti mancanti per finire il main:
+  Titolo, disclamer e regole.
+  Input scommessa e su chi.
+  Controllo del pareggio.
+  Aggiusstamento credito.
+  Controllo vincita, counter vincite. 
+  Output vincita e richiesta di rigioco.
+  Output quando si finisce di giocare.
