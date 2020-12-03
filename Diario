@@ -4,6 +4,7 @@
 
 Prima impostazione del lavoro in base ai punti da seguire per importanza:
 
+[decisioni collettive]
 gestione gioco
   randomizzatore delle mosse
   puntate
@@ -66,10 +67,6 @@ Da decidere:
 extra           Aggiustamento scommessa
 passi totali    50
 
-Leporati
-Betella
-Garoffoli
-Ragnoli
 
 *********************************
 
@@ -77,12 +74,13 @@ Ragnoli
 
 Funzioni aggiunte:
 
-bool positivo (int n) //true se un numero è  positivo
-bool credito_sufficiente (int n) //true se il credito è sufficiente
+bool positivo (int n) //true se un numero è  positivo [Ragnoli e Betella]
+int spazi (int n) [Ragnoli e Betella]
+bool credito_sufficiente (int n) //true se il credito è sufficiente [Garoffoli]
 
 Modifica funzione:
 
-bool credito_sufficiente (int credito, int puntata) 
+bool credito_sufficiente (int credito, int puntata) [Garoffoli]
 //true se il credito è sufficiente
 
 Suddivisione lavoro di oggi:
@@ -101,6 +99,7 @@ Funzioni ancora da revisionare:
 bool credito_sufficiente (int credito, int puntata)
 int spazi (int n)
 
+
 Aggiunta fuori dal main di:
 #include <ctime>
 #include <cstdlib>
@@ -112,33 +111,47 @@ srand (time(NULL));
 
 02/12/2020
 
+[Revisione collettiva]
 Modifica delle funzioni: 
 
-bool credito_sufficiente (int credito, int puntata)
+bool credito_sufficiente (int credito, int puntata) 
 //aggiustamento indentazione, funzionamento e commento
 //la funzione restituisce true se il credito è sufficiente altrimenti false
 
-int spazi (int n)
-//dato che non ha senso che venga restiutito un valore viene cambiata in
+int spazi (int n) dato che non ha senso 
+che venga restiutito un valore viene cambiata in
 void spazi (int n)
 //la funzione stampa un numero di spazi n
 
 
 Scrittura delle funzioni:
 
-int spostamento_lepre () 
+int spostamento_lepre () [Leporati, Ragnoli e Garoffoli]
 //la funzione genera un numero corrispondente al numero di passi che la 
 //lepre deve fare tenendo conto delle probabilità
 
-int gettoni_vinti()
+int gettoni_vinti() [Garoffoli]
 
 
 Modifica e scrittura della funzione:
 
-void disegno_tarta (int avanzamento_tarta, int passi_totali)
+void disegno_tarta (int avanzamento_tarta, int passi_totali) [Leporati e Ragnoli]
 //la funzione muove la tartaruga di avanzamento_tarta spazi e 
 //disegna il traguardo i base ai passi totali che la tartaruga deve fare
 
-void disegno_lepre (int avanzamento_lepre, int passi_totali)
+void disegno_lepre (int avanzamento_lepre, int passi_totali) [Betella]
 //la funzione muove la lepre di avanzamento_lepre spazi e 
 //disegna il traguardo i base ai passi totali che la lepre deve fare
+
+
+
+*********************************
+
+03/12/2020
+
+Modifica delle decisioni:
+I passi totali vengono portati da 50 a 100.
+Aggiustamento della scommessa passa da una volta a ogni 
+aggiornamento a 1 volta ogni 15 prima che una delle due 
+concorrenti arrivi a metà percorso.
+
