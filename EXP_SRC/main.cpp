@@ -109,6 +109,8 @@ void disegno_tarta (int avanzamento_tarta, int passi_totali)
     cout << "x" << endl;
 }
 
+//la funzione muove la lepre di avanzamento_lepre spazi e
+//disegna il traguardo i base ai passi totali che la lepre deve fare
 void disegno_lepre (int avanzamento_lepre, int passi_totali)
 {
     int spazi_dopo = passi_totali - avanzamento_lepre - 1;  //trovo a quanti passi dista il traguardo
