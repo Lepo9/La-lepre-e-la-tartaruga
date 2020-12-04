@@ -46,6 +46,8 @@ void disegno_lepre (int avanzamento_tarta, int passi_totali)
 
 03/12/2020
 
+update 0.4
+
 Scrittura struttura generale del main: 
 
 Introduzione delle seguenti stringhe:
@@ -61,3 +63,17 @@ Aggiunta delle variabili:
     const int passi_totali = 100; //passi totali
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
     
+    
+*********************************
+
+04/12/2020
+
+update 0.5
+
+Scrittura generale del main:
+
+system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+system ("cls"); //viene richiamata la funzione cls per cancellare la shell
+system ("color ");//viene richiamta la funzione color per modificare il colore del testo
+int scommessa(gettoni)
+int scelta(0,1) (0 tartargura - 1 lepre)
