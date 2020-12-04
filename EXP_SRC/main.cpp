@@ -1,13 +1,13 @@
-#include <iostream> 
-#include <ctime>    
+#include <iostream>
+#include <ctime>
 #include <cstdlib>
-#include <windows.h>    //libreria per sleep 
+#include <windows.h>    //libreria per sleep
 
 using namespace std;
 
 //Progetto Informatica
 //Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
-//Revisione 0.3
+//Revisione 0.4
 
 //se positivo restituisce valore true, se il numero è postivo altrimenti false
 bool positivo (int n)
@@ -171,14 +171,14 @@ int main()
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
-    
+
     while (credito > 0 && flag_giocare == true) //ciclo per fare più manche
     {
-        
+
         //input su chi si scommette
         //input quanto si scommette
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
-        {         
+        {
             cout << "Il tuo credito residuo vale " << credito << " gettoni." << endl << endl;
 
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
@@ -222,14 +222,14 @@ int main()
             disegno_tarta (passi_tarta, passi_totali); //viene disegnata la tarta
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
-            
+
             //parte ririchiesta credito
         }
-        
+
         //controllo chi ha vinto
         //output quanto si ha vinto e a quante partite si ha in totale, vinte e perse
         //vuoi rigiocaare
-        
+
     }
 
 
@@ -241,7 +241,7 @@ int main()
     {
         cout << "Non vuoi rigiocare? Nessun problema! Ci vediamo alla prossima!";
     }
-    
+
 
 
 
