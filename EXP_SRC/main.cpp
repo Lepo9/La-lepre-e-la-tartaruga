@@ -159,8 +159,8 @@ int main()
     const int passi_totali = 100; //passi totali
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
 
-    //inserire titolo
-    cout << "Ciao!" << endl << "Benvenuto in Enimol Game Turtle Vs Rabbit edition!" << endl;
+    system ("title Enimol Game : Turtle VS Rabbit Edition!");
+    cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl;
     //inserire disclamer
     //inserire regole
 
