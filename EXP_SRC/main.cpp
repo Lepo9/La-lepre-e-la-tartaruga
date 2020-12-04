@@ -160,17 +160,16 @@ int main()
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
 
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
-    cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl;
-
-    cout << endl;
-
+    cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    
     system ("cls"); //viene richiamata la funzione cls per cancellare la shell
     system ("color 4");//viene riciamata la funzione color per modificare il color a rosso //color 7 per verde
     cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
     cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
-    //Disclaimer
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    
+    //Disclaimer
     system ("color 7"); //viene richiamata la funzione color per modificare il colore a bianco
     system ("cls");  //viene richiamata la funzione cls per cancellare la shell
 
@@ -188,7 +187,7 @@ int main()
     cout << "Scivolone corto    : 20% di possibilità : 2 passi avanti" << endl;
     cout << endl;
 
-    system("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    system("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia letto le regole
     system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
 
