@@ -170,6 +170,8 @@ int main()
     cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
     cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
     //Disclaimer
+    system ("pause");
+    system ("cls");
 
 
 
