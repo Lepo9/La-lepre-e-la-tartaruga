@@ -206,7 +206,7 @@ int main()
         cin >> scelta;
         
         if (scelta == 0)
-            cout <<"Quanto vuoi scommettere sulla tartaruga?" << endl
+            cout <<"Quanto vuoi scommettere sulla tartaruga?" << endl;
         else 
             cout << "Quanto vuoi scommettere sulla lepre?" << endl;
         
@@ -288,9 +288,9 @@ int main()
         cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
         cin >> flag_giocare;
         if (flag_giocare == 1)
-            flag_giocatore == true;
+            flag_giocare = true;
         else if (flag_giocare == 0)
-            flag_giocatore == false;
+            flag_giocare = false;
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
                 
     }
