@@ -159,15 +159,19 @@ int main()
     const int passi_totali = 100; //passi totali
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
 
-    system ("title Enimol Game : Turtle VS Rabbit Edition!");
+    system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl;
-    //inserire disclamer
-    //inserire regole
 
     cout << endl;
 
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
     system ("cls"); //viene richiamata la funzione cls per cancellare la shell
+
+    cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
+    cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
+    //Disclaimer
+
+
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
