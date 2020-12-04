@@ -158,6 +158,8 @@ int main()
     int passi_lepre = 0, passi_tarta = 0; //contatori passi
     const int passi_totali = 100; //passi totali
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
+    int scelta; //scelta del giocatore su chi punture i gettoni (0 = Tartaruga, 1 = Lepre)
+    int scommessa; //Gettoni scommessi
 
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
@@ -167,7 +169,7 @@ int main()
     system ("color 4");//viene riciamata la funzione color per modificare il color a rosso //color 7 per verde
     cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
     cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
-    system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia letto le regole
 
     //Disclaimer
     system ("color 7"); //viene richiamata la funzione color per modificare il colore a bianco
@@ -193,16 +195,32 @@ int main()
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
-
+    system("cls"); //viene richiamata la funzione cls per cancellare la shell
+    
     while (credito > 0 && flag_giocare == true) //ciclo per fare più manche
     {
-
-        //input su chi si scommette
-        //input quanto si scommette
+        cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
+        //il giocatore sceglie su chi puntaree
+        cout << "Digita 0 se vuoi scommettere sula tartaruga oppure digita 1 se vuoi scommettere sulla lepre." << endl;
+        cout << "La tua scelta e': " ;
+        cin >> scelta;
+        
+        if (scelta == 0)
+            cout <<"Quanto vuoi scommettere sulla tartaruga?" << endl
+        else 
+            cout << "Quanto vuoi scommettere sulla lepre?" << endl;
+        
+        //il giocatore fa la puntata
+        cout << "Inserisci la scommessa in gettoni:  ";
+        cin >> scommessa;  
+        cout << "In bocca al lupo, buon divertimento!" << endl;
+        system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente sia pronto a giocare
+        system("cls"); //viene richiamata la funzione cls per cancellare la shell
+        
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
-            cout << "Il tuo credito residuo vale " << credito << " gettoni." << endl << endl;
-
+            cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
+            
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
             passi_tarta += spostamento_tarta(); //aggiornamento del contatore dei passi della tarta
 
@@ -249,19 +267,22 @@ int main()
         }
 
         //controllo chi ha vinto
+        
         //output quanto si ha vinto e a quante partite si ha in totale, vinte e perse
-        //vuoi rigiocaare
-
-    }
-
-    bool flag_giocatore;
-        cout << "Game Over, se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " << endl;
+        
+        cout <<"Il tuo credito vale " << credito << " gettoni." << endl; //vengono ribaditi i gettoni residui
+        cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
         cin >> flag_giocare;
         if (flag_giocare == 1)
             flag_giocatore == true;
         else if (flag_giocare == 0)
             flag_giocatore == false;
-        return 0;
+        system("cls"); //viene richiamata la funzione cls per cancellare la shell
+                
+    }
+
+
+
 
     if (credito == 0) //non si ha più credito sufficiente
     {
@@ -271,9 +292,6 @@ int main()
     {
         cout << "Non vuoi rigiocare? Nessun problema! Ci vediamo alla prossima!";
     }
-
-
-
 
     return 0;
 }
