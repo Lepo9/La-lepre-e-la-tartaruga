@@ -162,13 +162,13 @@ int main()
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
-    
+
     system ("cls"); //viene richiamata la funzione cls per cancellare la shell
     system ("color 4");//viene riciamata la funzione color per modificare il color a rosso //color 7 per verde
     cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
     cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
-    
+
     //Disclaimer
     system ("color 7"); //viene richiamata la funzione color per modificare il colore a bianco
     system ("cls");  //viene richiamata la funzione cls per cancellare la shell
@@ -256,13 +256,13 @@ int main()
 
     bool flag_giocatore;
         cout << "Game Over, se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " << endl;
-        cin >> flag_giocare
+        cin >> flag_giocare;
         if (flag_giocare == 1)
-            flag_giocatore == true
+            flag_giocatore == true;
         else if (flag_giocare == 0)
-            flag_giocatore == false
+            flag_giocatore == false;
         return 0;
-        
+
     if (credito == 0) //non si ha più credito sufficiente
     {
         cout << "Mi dispiace hai finito il credito!";
