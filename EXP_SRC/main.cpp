@@ -166,13 +166,30 @@ int main()
 
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
     system ("cls"); //viene richiamata la funzione cls per cancellare la shell
-
+    system ("color 4");//viene riciamata la funzione color per modificare il color a rosso //color 7 per verde
     cout << "Il gioco è pensato per un pubblico adulto e non offre gioco d’azzardo con denaro reale o possibilità di vincere denaro reale o premi." << endl;
     cout << "Il gioco è volto esclusivamente all’intrattenimento e non esercitano alcuna influenza sull’eventuale futuro utilizzo di giochi d’azzardo con denaro reale." << endl;
     //Disclaimer
-    system ("pause");
-    system ("cls");
+    system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    system ("color 7"); //viene richiamata la funzione color per modificare il colore a bianco
+    system ("cls");  //viene richiamata la funzione cls per cancellare la shell
+    
+    //Tutte le regole del gioco divise in Nome:Possibilità:Passi
+    cout << "La tartaruga può fare le seguenti mosse: " << endl;
+    cout << "Arrancata Rapida   : 50% di possibilità : 3 passi avanti" << endl;
+    cout << "Scivolone          : 20% di possibilità : 6 passi indietro" << endl;
+    cout << "Arrancata Lenta    : 30% di possibilità : 1 passo avanti" << endl;
+    cout << endl;
+    cout << "La lepre può fare le seguenti mosse: " << endl;
+    cout << "Dormita            : 20% di possibilità : Nessun passo" << endl;
+    cout << "Salto lungo        : 20% di possibilità : 9 passi avanti" << endl;
+    cout << "Scivolone lungo    : 10% di possibilità : 12 passi indietro" << endl;
+    cout << "Salto corto        : 30% di possibilità : 1 passo avanti" << endl;
+    cout << "Scivolone corto    : 20% di possibilità : 2 passi avanti" << endl;
+    cout << endl;
 
+    system("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
+    system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
