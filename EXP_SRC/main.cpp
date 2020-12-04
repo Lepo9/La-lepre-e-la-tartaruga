@@ -173,7 +173,7 @@ int main()
     system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
     system ("color 7"); //viene richiamata la funzione color per modificare il colore a bianco
     system ("cls");  //viene richiamata la funzione cls per cancellare la shell
-    
+
     //Tutte le regole del gioco divise in Nome:Possibilità:Passi
     cout << "La tartaruga può fare le seguenti mosse: " << endl;
     cout << "Arrancata Rapida   : 50% di possibilità : 3 passi avanti" << endl;
@@ -245,7 +245,7 @@ int main()
             disegno_tarta (passi_tarta, passi_totali); //viene disegnata la tarta
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
-
+            system("cls");
             //parte ririchiesta credito
         }
 
