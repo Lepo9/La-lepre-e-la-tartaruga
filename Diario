@@ -219,3 +219,21 @@ Parti mancanti per finire il main:
   Controllo vincita, counter vincite. 
   Output vincita e richiesta di rigioco.
   Output quando si finisce di giocare.
+
+*********************************
+
+04/12/2020
+
+Parti aggiunte:
+ Titolo,disclaimer e regole.
+ Richiesta di rigioco.
+ Input scommessa e su chi.
+ Controllo del credito
+ 
+ Variabili:
+ int scommessa(gettoni)
+ int scelta(0,1) (0 tartargura - 1 lepre)
+ 
+Parti da aggiungere:
+ Regola riscommessa
+ 
