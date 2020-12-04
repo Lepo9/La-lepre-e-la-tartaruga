@@ -255,7 +255,15 @@ int main()
 
     }
 
-
+    bool flag_giocatore;
+        cout << "Game Over, se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " << endl;
+        cin >> flag_giocare
+        if (flag_giocare == 1)
+            flag_giocatore == true
+        else if (flag_giocare == 0)
+            flag_giocatore == false
+        return 0;
+        
     if (credito == 0) //non si ha più credito sufficiente
     {
         cout << "Mi dispiace hai finito il credito!";
