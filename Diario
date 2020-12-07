@@ -249,6 +249,10 @@ Parti da aggiungere:
  
  Sono stati implementati i commenti [Garoffoli]
  Sono state leggermente modificate le regole [Leporati]
+ Modifica di parti del codice: [Leporati]
+  Aggiunta inizializzazione variabili a inizio partita.
+  Risoluzione errori generale in campo semantico che non facevago partire alcune funzioni.
+  Implementazione delle farie funzioni e variabil nel codice al fine di irrobustirlo.
  
 
 
@@ -259,3 +263,5 @@ Parti da aggiungere:
  int temp; //Variabile temporanea
  int contagiri; //Conta i giri di ogni giocata
  bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
+ 
+
