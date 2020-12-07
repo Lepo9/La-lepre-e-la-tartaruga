@@ -185,25 +185,25 @@ int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se 
 int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione che chiede all'utente se vuole raddoppiare la scommessa
 {
     int scelta;
-    if (contagiri % 15 == 0 && credito > 0)
+    if (contagiri % 15 == 0 && credito > 0) //Controlla se il contagiri è divisibile per 15 e controlla se il credito è maggiore di 0
     {
-        if (scommessa * 2 > cedito)
+        if (scommessa * 2 > credito) //Controlla se ha abbastanza credito per raddoppiare
         {
             cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: "
             scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
-            if (scelta == 1)
-                return credito;
+            if (scelta == 1) //Controlla se l'utente ha scelto 0 o 1
+                return credito; //Se è 1 scommette tutto il credito
             else
-                return 0;
+                return 0; //Ritorna 0 se l'utente non vuole scommettere tutto
         }
         else
         {
             cout << "Vuoi raddoppiare la scommessa? Inserisci 1 se vuoi raddoppiare, altrimenti digita 0: ";
             scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
             if (scelta == 1)
-                return scommessa;
+                return scommessa; //Se è 1 raddoppia la scommessa
             else
-                return 0;
+                return 0; //Se è 0 non raddoppia la scommessa
         }
     }
     else
