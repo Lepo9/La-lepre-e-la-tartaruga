@@ -243,13 +243,19 @@ Parti da aggiungere:
 07/12/2020
 
  Parti aggiunte:
- Controllo scelta
- Controllo puntata
+ Controllo scelta [Garoffoli]
+ Controllo puntata  [Betella]
+ Controllo ripuntata [Betella e Leporati]
+ 
+ Sono stati implementati i commenti [Garoffoli]
+ Sono state leggermente modificate le regole [Leporati]
+ 
 
 
- Variabili:
- int puntata(int credito)
- int scelta_binaria()
- int scommessa_raddoppiata(int scommessa, int contagiri, int credito)
- int contagiri
- bool flag_meta
+ Variabili e funzioni aggiunte:
+
+ int puntata(int credito) //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
+ int scelta_binaria(); //Controlla se la scelta è 1 o 0
+ int temp; //Variabile temporanea
+ int contagiri; //Conta i giri di ogni giocata
+ bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
