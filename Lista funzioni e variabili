@@ -46,3 +46,7 @@ const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
 int puntata(int credito) //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
 
 int scelta_binaria() //Controlla se la scelta è 1 o 0
+
+int temp //Variabile temporanea
+
+int contagiri //Conta i giri di ogni giocata
