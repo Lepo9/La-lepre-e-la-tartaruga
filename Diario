@@ -263,6 +263,9 @@ Parti da aggiungere:
  int temp; //Variabile temporanea
  int contagiri; //Conta i giri di ogni giocata
  bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
- 
+ void guadagno() //Calcola il guadagno e controlla se il giocatore ha perso o ha guadagnato
+ int credito_iniziale; //è il credito che si aveva inserito all'inizio
+ int contatore_vittorie = 0, contatore_sconfitte = 0; 
+
  Scrittura della parte grafica relativa ai casi in cui entrambe passino il traguardo [Ragnoli e Leporati]
 
