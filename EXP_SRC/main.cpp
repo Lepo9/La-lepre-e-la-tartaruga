@@ -169,7 +169,7 @@ int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se 
     //il giocatore fa la puntata
     cout << "Inserisci la scommessa in gettoni:  ";
     cin >> scommessa;
-    //viene controllato il credito 
+    //viene controllato il credito
     while (credito_sufficiente (credito, scommessa) == false || positivo (scommessa) == false)
     {
         cout << endl;
@@ -182,7 +182,7 @@ int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se 
     return scommessa;
 }
 
-int scommessa_raddoppiata (int scommessa, int contagiri, int credito)
+int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione che chiede all'utente se vuole raddoppiare la scommessa
 {
     int scelta;
     if (contagiri % 15 == 0 && credito > 0)
@@ -190,7 +190,7 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito)
         if (scommessa * 2 > cedito)
         {
             cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: "
-            scelta = scelta_binaria();
+            scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
             if (scelta == 1)
                 return credito;
             else
@@ -199,15 +199,15 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito)
         else
         {
             cout << "Vuoi raddoppiare la scommessa? Inserisci 1 se vuoi raddoppiare, altrimenti digita 0: ";
-            scelta = scelta_binaria();
+            scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
             if (scelta == 1)
                 return scommessa;
-            else 
+            else
                 return 0;
         }
     }
-    else 
-        return 0;    
+    else
+        return 0;
 }
 
 int main()
@@ -279,9 +279,9 @@ int main()
         cout << "In bocca al lupo, buon divertimento!" << endl;
         system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente sia pronto a giocare
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
-        
+
         contagiri = 0;
-        
+
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
             contagiri++;
@@ -329,11 +329,11 @@ int main()
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
             system("cls");
-            
+
             temp = scommessa_raddoppiata (scommessa, contagiri, credito); //temp assume il valore della riscommessa
             scommessa += temp; //viene aggiornata la scommessa
             credito -= temp; //viene aggiornato il credito
-            
+
         }
 
         //controllo chi ha vinto
