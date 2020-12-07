@@ -210,6 +210,19 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione
         return 0;
 }
 
+void guadagno(int credito_finale, int credito_iniziale)
+{
+    int differenza = credito_finale - credito_iniziale;
+    if(differenza < 0)
+        differenza * -1;
+    if(credito_finale > credito_iniziale)
+        cout << "Hai guadagnato " << differenza << " gettoni!";
+    else if(credito_finale < credito_iniziale)
+        cout << "Hai perso " << differenza << " gettoni!";
+    else
+        cout << "Il tuo credito è rimasto invariato";
+}
+
 int main()
 {
     srand (time(NULL));
