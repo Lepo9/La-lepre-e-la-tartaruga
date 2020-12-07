@@ -185,7 +185,7 @@ int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se 
 int scommessa_raddoppiata (int scommessa, int contagiri, int credito)
 {
     int scelta;
-    if (contagiri == 15 && credito > 0)
+    if (contagiri % 15 == 0 && credito > 0)
     {
         if (scommessa * 2 > cedito)
         {
@@ -221,6 +221,8 @@ int main()
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
     int scelta; //scelta del giocatore su chi punture i gettoni (0 = Tartaruga, 1 = Lepre)
     int scommessa; //Gettoni scommessi
+    int contagiri=0; //conta il numero di giri di una giocata
+    int temp; //variabile temporanea
 
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
@@ -277,9 +279,12 @@ int main()
         cout << "In bocca al lupo, buon divertimento!" << endl;
         system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente sia pronto a giocare
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
-
+        
+        contagiri = 0;
+        
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
+            contagiri++;
             cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
 
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
@@ -324,8 +329,11 @@ int main()
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
             system("cls");
-
-            //parte ririchiesta credito
+            
+            temp = scommessa_raddoppiata (scommessa, contagiri, credito); //temp assume il valore della riscommessa
+            scommessa += temp; //viene aggiornata la scommessa
+            credito -= temp; //viene aggiornato il credito
+            
         }
 
         //controllo chi ha vinto
