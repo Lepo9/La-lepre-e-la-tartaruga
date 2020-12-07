@@ -77,3 +77,5 @@ system ("cls"); //viene richiamata la funzione cls per cancellare la shell
 system ("color ");//viene richiamta la funzione color per modificare il colore del testo
 int scommessa(gettoni)
 int scelta(0,1) (0 tartargura - 1 lepre)
+
+Aggiunta aggiustaento parte grafica del traguardo in caso di pareggio.
