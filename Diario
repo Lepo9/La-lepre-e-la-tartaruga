@@ -253,7 +253,7 @@ Parti da aggiungere:
   Aggiunta inizializzazione variabili a inizio partita.
   Risoluzione errori generale in campo semantico che non facevago partire alcune funzioni.
   Implementazione delle farie funzioni e variabil nel codice al fine di irrobustirlo.
- 
+ Cancellazione gettoni vinti
 
 
  Variabili e funzioni aggiunte:
