@@ -237,3 +237,15 @@ Parti aggiunte:
 Parti da aggiungere:
  Regola riscommessa
  Controllare Input 0,1
+
+*********************************
+
+07/12/2020
+
+ Parti aggiunte:
+ Controllo scelta
+ Controllo puntata
+ 
+ Variabili:
+ int puntata(int credito)
+ int scelta_binaria()
