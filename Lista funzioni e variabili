@@ -52,3 +52,10 @@ int temp //Variabile temporanea
 int contagiri //Conta i giri di ogni giocata
 
 bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
+
+void guadagno (int credito_finale, int credito_iniziale) //stampa quanti gettoni si ha vinto dall'inizio o si ha perso
+
+int credito_iniziale; //è il credito che si aveva inserito all'inizio
+
+int contatore_vittorie = 0, contatore_sconfitte = 0; //
+
