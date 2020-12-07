@@ -7,7 +7,6 @@ using namespace std;
 
 //Progetto Informatica
 //Autori: Giacomo Garoffoli, Marco Leporati, Daniele Ragnoli, Matteo Betella
-//Revisione 0.4
 
 //se positivo restituisce valore true, se il numero è postivo altrimenti false
 bool positivo (int n)
@@ -152,7 +151,7 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali)
 int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
 {
   int n;
-  while(1 != 0)
+  while(1 != 0) //ciclo infinito che esce solo se l'utente inserisce 0 o 1
   {
   cin >> n;
    if(n == 0) //Controlla se la scelta è 0
@@ -190,7 +189,7 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione
         cout << "La tua scommessa vale " << scommessa << " gettoni." << endl;
         if (scommessa * 2 > credito) //Controlla se ha abbastanza credito per raddoppiare
         {
-            cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: ";
+            cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 se vuoi scommettere tutto, altrimenti digita 0: ";
             scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
             if (scelta == 1) //Controlla se l'utente ha scelto 0 o 1
                 return credito; //Se è 1 scommette tutto il credito
@@ -290,6 +289,7 @@ int main()
         
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
+            system("cls");
             contagiri++;
             cout << "Il tuo credito vale " << credito << " gettoni." << endl;
             cout << "Nel caso vincesse la ";
@@ -307,19 +307,23 @@ int main()
             if (passi_tarta < 0)    //nel caso i pssi della tarta vadano sotto 0 vengono riportati a 0
                 passi_tarta = 0;
 
-            if (passi_lepre > passi_totali && passi_tarta > passi_totali) //nel caso entrambi passino il traguardo insieme
+            if (passi_lepre >= passi_totali && passi_tarta >= passi_totali) //nel caso entrambi passino il traguardo insieme
             {
                 if (passi_lepre > passi_tarta)          //controllo se è arrivata prima la lepre
                 {
-                    //vince tarta
+                    passi_lepre = passi_totali;         //la lepre viene portata al traguardo
+                    passi_tarta = passi_totali - 1;     //la tarta viene portata un passo indietro al tragurado      
                 }
                 else if (passi_lepre == passi_tarta)    //controllo se sono arrivate esattamente insieme
-                {
-                    //pareggio
+                {                                       //pareggio erfetto: entrambe tornano indietro di 5 passi dal traguardo
+                    passi_lepre = passi_totali - 5;     
+                    passi_tarta = passi_totali - 5;
                 }
                 else                                    //la tarta è arrivata prima
                 {
-                    //vince lepre
+                    passi_tarta = passi_totali;         //la tarta viene portata al traguardo
+                    passi_lepre = passi_totali - 1;     //la lepre viene portata un passo indietro al tragurado 
+                    
                 }
             }
             else    //controllo se una delle due è arrivata prima
@@ -352,8 +356,6 @@ int main()
             }
             
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
-            system("cls");
-
         }
 
         //controllo chi ha vinto
