@@ -13,12 +13,7 @@ int spostamento_tarta ()
 
 int spostamento_lepre ()
 //la funzione genera un numero corrispondente al numero di passi che la
-//lepre deve fare tenendo conto delle probabilit
-
-int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore)
-//la funzione restuisce i gettoni vinti
-//bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
-//bool flag_vincitore: chi vince (true=tarta; false=lepre)
+//lepre deve fare tenendo conto delle probabilita
 
 void disegno_tarta (int avanzamento_tarta, int passi_totali)
 //la funzione muove la tartaruga di avanzamento_tarta spazi e
