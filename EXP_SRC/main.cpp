@@ -72,16 +72,6 @@ int spostamento_lepre ()
         return -2;      //  scivolone corto
 }
 
-//la funzione restuisce i gettoni vinti
-int gettoni_vinti (int gettoni_puntati, bool flag_scommessa, bool flag_vincitore)
-  //bool flag_scommessa: su chi scommetto (true=tarta; false=lepre)
-  //bool flag_vincitore: chi vince (true=tarta; false=lepre)
-{
-    if(flag_vincitore == flag_scommessa) //se il vincitore è lo stesso di chi abbiamo puntato
-        return gettoni_puntati * 2;     //vinciamo il doppio dei gettoni
-    return 0;  //altrimenti non vinciamo niente
-}
-
 //la funzione muove la tartaruga di avanzamento_tarta spazi e
 //disegna il traguardo i base ai passi totali che la tartaruga deve fare
 void disegno_tarta (int avanzamento_tarta, int passi_totali)
@@ -210,17 +200,17 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione
         return 0;
 }
 
-void guadagno(int credito_finale, int credito_iniziale)
+void guadagno(int credito_finale, int credito_iniziale) //stampa quanti gettoni si ha vinto dall'inizio o si ha perso
 {
-    int differenza = credito_finale - credito_iniziale;
-    if(differenza < 0)
-        differenza * -1;
-    if(credito_finale > credito_iniziale)
-        cout << "Hai guadagnato " << differenza << " gettoni!";
-    else if(credito_finale < credito_iniziale)
-        cout << "Hai perso " << differenza << " gettoni!";
-    else
-        cout << "Il tuo credito è rimasto invariato";
+    int differenza = credito_finale - credito_iniziale; //calcolo guadagno/perdita
+    if (differenza < 0) //viene fatto il modulo
+        differenza *= -1; 
+    if (credito_finale > credito_iniziale)  //c'è stato un guadagno
+        cout << "Hai guadagnato dall'inizio " << differenza << " gettoni!" << endl;
+    else if (credito_finale < credito_iniziale) //c'è stata una perdita
+        cout << "Hai perso dall'inizio " << differenza << " gettoni!" << endl;
+    else  //si è rimasti in pari                                  
+        cout << "Il tuo credito dall'inizio è rimasto invariato!" << endl;
 }
 
 int main()
@@ -237,6 +227,8 @@ int main()
     int contagiri=0; //conta il numero di giri di una giocata
     int temp; //variabile temporanea
     bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
+    int credito_iniziale; //è il credito che si aveva inserito all'inizio
+    int contatore_vittorie = 0, contatore_sconfitte = 0;
 
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
@@ -273,6 +265,7 @@ int main()
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
+    credito_iniziale = credito;
     system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
     while (credito > 0 && flag_giocare == true) //ciclo per fare più manche
@@ -371,23 +364,56 @@ int main()
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
         }
 
+        
         //controllo chi ha vinto
-
-        //output quanto si ha vinto e a quante partite si ha in totale, vinte e perse
-
-        cout <<"Il tuo credito vale " << credito << " gettoni." << endl; //vengono ribaditi i gettoni residui
-        cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
-        flag_giocare = scelta_binaria ();
-        if (flag_giocare == 1)
-            flag_giocare = true;
-        else if (flag_giocare == 0)
-            flag_giocare = false;
+        if (passi_tarta > passi_lepre)
+        {
+            if (scelta == 0)
+            {
+                cout << "Congratulazioni! Scommettendo sulla tartaruga hai raddoppiato la tua scommessa vincendo " << scommessa*2 << " gettoni!" << endl; 
+                credito = credito + scommessa*2; //aggiornamento credito
+                contatore_vittorie++;
+            }
+            else
+            {
+                cout << "Mi dispiace, la lepre non ha vinto..." << endl;
+                contatore_sconfitte++;
+            }
+        }
+        else
+        {
+            if (scelta == 1)
+            {
+                cout << "Congratulazioni! Scommettendo sulla lepre hai raddoppiato la tua scommessa vincendo " << scommessa*2 << " gettoni!" << endl; 
+                credito = credito + scommessa*2; //aggiornamento credito
+                contatore_vittorie++;
+            }
+            else
+            {
+                cout << "Mi dispiace, la tartaruga non ha vinto..." << endl;
+                contatore_sconfitte++;
+            }
+        }
+        
+        //viene stampato quanto si ha guadagnato o meno dall'inizio
+        guadagno (credito, credito_iniziale);
+        
+        //output quante partite si ha in totale, vinte e perse
+        cout << "Hai vinto " << contatore_vittorie << " partite e hai perso " << contatore_sconfitte << " partite." << endl << endl;
+        
+        if (credito != 0)
+        {
+            cout <<"Il tuo credito vale " << credito << " gettoni." << endl; //vengono ribaditi i gettoni residui
+            cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
+            flag_giocare = scelta_binaria ();
+            if (flag_giocare == 1)
+                flag_giocare = true;
+            else if (flag_giocare == 0)
+                flag_giocare = false;
+        }
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
     }
-
-
-
 
     if (credito == 0) //non si ha più credito sufficiente
     {
@@ -397,6 +423,7 @@ int main()
     {
         cout << "Non vuoi rigiocare? Nessun problema! Ci vediamo alla prossima!";
     }
-
+    cout << endl;
+    
     return 0;
 }
