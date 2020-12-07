@@ -149,6 +149,20 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali)
     cout << "x" << endl;
 }
 
+int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
+{
+  int n;
+  while(1 != 0)
+  {
+  cin >> n;
+   if(n == 0) //Controlla se la scelta è 0
+      return 0;
+   else if(n == 1) //Controlla se la scelta è 1
+      return 1;
+  cout << "Puoi inserire solo 0 o 1: ";
+ }
+}
+
 int main()
 {
     srand (time(NULL));
@@ -196,26 +210,26 @@ int main()
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
     system("cls"); //viene richiamata la funzione cls per cancellare la shell
-    
+
     while (credito > 0 && flag_giocare == true) //ciclo per fare più manche
     {
         cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
         //il giocatore sceglie su chi puntaree
         cout << "Digita 0 se vuoi scommettere sula tartaruga oppure digita 1 se vuoi scommettere sulla lepre." << endl;
         cout << "La tua scelta e': " ;
-        cin >> scelta;
-        
+        scelta = scelta_binaria();
+
         if (scelta == 0)
             cout <<"Quanto vuoi scommettere sulla tartaruga?" << endl;
-        else 
+        else
             cout << "Quanto vuoi scommettere sulla lepre?" << endl;
-        
-        //il giocatore fa la puntata 
+
+        //il giocatore fa la puntata
         cout << "Inserisci la scommessa in gettoni:  ";
         cin >> scommessa;
         //viene controllato il credito
         while (credito_sufficiente (credito, scommessa) == false || positivo (scommessa) == false)
-        {   
+        {
             cout << endl;
             cout << "Non fare il furbo! Inserisci una scommessa valida." << endl;
             cout << "Il tuo credito vale " << credito << " gettoni." << endl;
@@ -223,17 +237,17 @@ int main()
             cin >> scommessa;
             cout << endl;
         }
-        
+
         credito -= scommessa;
-        
+
         cout << "In bocca al lupo, buon divertimento!" << endl;
         system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente sia pronto a giocare
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
-        
+
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
             cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
-            
+
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
             passi_tarta += spostamento_tarta(); //aggiornamento del contatore dei passi della tarta
 
@@ -276,14 +290,14 @@ int main()
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
             system("cls");
-            
+
             //parte ririchiesta credito
         }
 
         //controllo chi ha vinto
-        
+
         //output quanto si ha vinto e a quante partite si ha in totale, vinte e perse
-        
+
         cout <<"Il tuo credito vale " << credito << " gettoni." << endl; //vengono ribaditi i gettoni residui
         cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
         cin >> flag_giocare;
@@ -292,7 +306,7 @@ int main()
         else if (flag_giocare == 0)
             flag_giocare = false;
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
-                
+
     }
 
 
