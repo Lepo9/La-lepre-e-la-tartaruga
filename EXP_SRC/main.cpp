@@ -163,6 +163,25 @@ int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
  }
 }
 
+int puntata (int credito)
+{
+    int scommessa;
+    //il giocatore fa la puntata
+    cout << "Inserisci la scommessa in gettoni:  ";
+    cin >> scommessa;
+    //viene controllato il credito 
+    while (credito_sufficiente (credito, scommessa) == false || positivo (scommessa) == false)
+    {
+        cout << endl;
+        cout << "Non fare il furbo! Inserisci una scommessa valida." << endl;
+        cout << "Il tuo credito vale " << credito << " gettoni." << endl;
+        cout << "Inserisci la scommessa in gettoni:  ";
+        cin >> scommessa;
+        cout << endl;
+    }
+    return scommessa;
+}
+
 int main()
 {
     srand (time(NULL));
