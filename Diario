@@ -18,7 +18,7 @@ Suddivisione scrittura
 
 Funzioni:
 
-int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore) 
+int gettoni_vinti (int gettoni_puntati, int flag_scommessa, int flag_vincitore)
   //restituisce in caso di vittoria il numero dei gettoni vinti
 
 int spazi (int n) //stampa un numero n ddi spazi (utile nel disegno)
@@ -26,15 +26,15 @@ int spazi (int n) //stampa un numero n ddi spazi (utile nel disegno)
 int spostamento_tarta () //restituisce quanti passi fa la tartaruga
 int spostamento_lepre () //restituisce quanti passi fa la lepre
 
-int disegno_tarta (int avanzamento_tarta) 
+int disegno_tarta (int avanzamento_tarta)
 //in base all'avanzamento stampa la tarta sfalsata in base all'avanzamento e il traguardo
-int disegno_lepre (int avanzamento_lepre) 
+int disegno_lepre (int avanzamento_lepre)
 //in base all'avanzamento stampa la lepre sfalsata in base all'avanzamento e il traguardo
 
 
 Scrittura del main
   gestione delle molteplici corse tramite cicli e variabili
-  gestione del denaro tramite calcolo_vincita 
+  gestione del denaro tramite calcolo_vincita
   gestione visualizzazzione tramite disegno_tarta e disegno_lepre
 
 
@@ -45,7 +45,7 @@ puntando altri gettoni.
 Funzionamento:
 Benvenuto
 Inserimento credito
-ciclo 
+ciclo
 {
   Stampa della tartaruga e lepre
   Su chi scommetti?
@@ -57,7 +57,7 @@ ciclo
   Si vuole rigiocare?
 }
 
-note: 
+note:
 La tartaruga e la lepre devonno essere lunghe uguali.
 Alla fine ci deve essere un traguardo.
 Per aspettare usare la funzione: get char.
@@ -85,7 +85,7 @@ bool credito_sufficiente (int credito, int puntata) [Garoffoli]
 
 Suddivisione lavoro di oggi:
 Leporati: Revisione e scrittura funzione   int spostamento_tarta ()
-Betella: lavoro con Ragnoli causa pc 
+Betella: lavoro con Ragnoli causa pc
 Garoffoli: Revisione indentazione e revisione generale  e aiuto dei compagni
 Ragnoli: lavoro con Betella
 
@@ -112,13 +112,13 @@ srand (time(NULL));
 02/12/2020
 
 [Revisione collettiva]
-Modifica delle funzioni: 
+Modifica delle funzioni:
 
-bool credito_sufficiente (int credito, int puntata) 
+bool credito_sufficiente (int credito, int puntata)
 //aggiustamento indentazione, funzionamento e commento
 //la funzione restituisce true se il credito è sufficiente altrimenti false
 
-int spazi (int n) dato che non ha senso 
+int spazi (int n) dato che non ha senso
 che venga restiutito un valore viene cambiata in
 void spazi (int n)
 //la funzione stampa un numero di spazi n
@@ -127,7 +127,7 @@ void spazi (int n)
 Scrittura delle funzioni:
 
 int spostamento_lepre () [Leporati, Ragnoli e Garoffoli]
-//la funzione genera un numero corrispondente al numero di passi che la 
+//la funzione genera un numero corrispondente al numero di passi che la
 //lepre deve fare tenendo conto delle probabilità
 
 int gettoni_vinti() [Garoffoli]
@@ -136,11 +136,11 @@ int gettoni_vinti() [Garoffoli]
 Modifica e scrittura delle funzioni:
 
 void disegno_tarta (int avanzamento_tarta, int passi_totali) [Leporati e Ragnoli]
-//la funzione muove la tartaruga di avanzamento_tarta spazi e 
+//la funzione muove la tartaruga di avanzamento_tarta spazi e
 //disegna il traguardo i base ai passi totali che la tartaruga deve fare
 
 void disegno_lepre (int avanzamento_lepre, int passi_totali) [Betella]
-//la funzione muove la lepre di avanzamento_lepre spazi e 
+//la funzione muove la lepre di avanzamento_lepre spazi e
 //disegna il traguardo i base ai passi totali che la lepre deve fare
 
 Sono stati usati i sguenti modelli grafici
@@ -169,8 +169,8 @@ Modifica delle decisioni:
 
 I passi totali vengono portati da 50 a 100.
 
-Aggiustamento della scommessa passa da una volta a ogni 
-aggiornamento a 1 volta ogni 15 prima che una delle due 
+Aggiustamento della scommessa passa da una volta a ogni
+aggiornamento a 1 volta ogni 15 prima che una delle due
 concorrenti arrivi a metà percorso.
 
 Ogni frame ogni 350 millisecondi.
@@ -179,7 +179,7 @@ Ogni frame ogni 350 millisecondi.
 Modifica della struttura del main:
 Benvenuto.
 Inserimento credito.
-ciclo 
+ciclo
 {
   Su chi scommetti?
   Quanto scommetti?
@@ -199,7 +199,7 @@ Alla prossima/hai finito il credito.
 Scrittura struttura generale del main: [Leporati, Garoffoli, Betella e Ragnoli]
 
 Introduzione delle seguenti stringhe:
-  #include <windows.h>    //libreria per sleep 
+  #include <windows.h>    //libreria per sleep
   Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
   system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente abbia le regole
   system ("cls"); //viene richiamata la funzione cls per cancellare la shell
@@ -210,13 +210,13 @@ Aggiunta delle variabili:
     int passi_lepre = 0, passi_tarta = 0; //contatori passi
     const int passi_totali = 100; //passi totali
     const int intervallo_fotogrammi = 350; //intervallo dei fotogrammi
-    
+
 Parti mancanti per finire il main:
   Titolo, disclamer e regole.
   Input scommessa e su chi.
   Controllo del pareggio.
   Aggiusstamento credito.
-  Controllo vincita, counter vincite. 
+  Controllo vincita, counter vincite.
   Output vincita e richiesta di rigioco.
   Output quando si finisce di giocare.
 
@@ -229,11 +229,11 @@ Parti aggiunte:
  Richiesta di rigioco.
  Input scommessa e su chi.
  Controllo del credito
- 
+
  Variabili:
  int scommessa(gettoni)
  int scelta(0,1) (0 tartargura - 1 lepre)
- 
+
 Parti da aggiungere:
  Regola riscommessa
  Controllare Input 0,1
@@ -245,10 +245,11 @@ Parti da aggiungere:
  Parti aggiunte:
  Controllo scelta
  Controllo puntata
- 
- 
+
+
  Variabili:
  int puntata(int credito)
  int scelta_binaria()
  int scommessa_raddoppiata(int scommessa, int contagiri, int credito)
  int contagiri
+ bool flag_meta
