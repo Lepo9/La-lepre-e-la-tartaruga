@@ -354,7 +354,7 @@ int main()
 
         cout <<"Il tuo credito vale " << credito << " gettoni." << endl; //vengono ribaditi i gettoni residui
         cout << "Se vuoi ritentare la Fortua premi 1, se non vuoi più giocare premi 0: " ; //il giocatore sceglie
-        cin >> flag_giocare;
+        flag_giocatore = scelta_binaria ();
         if (flag_giocare == 1)
             flag_giocare = true;
         else if (flag_giocare == 0)
