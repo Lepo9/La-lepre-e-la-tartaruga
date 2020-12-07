@@ -186,7 +186,8 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione
 {
     int scelta;
     if (contagiri % 15 == 0 && credito > 0) //Controlla se il contagiri è divisibile per 15 e controlla se il credito è maggiore di 0
-    {
+    {   
+        cout << "La tua scommessa vale " << scommessa << " gettoni." << endl;
         if (scommessa * 2 > credito) //Controlla se ha abbastanza credito per raddoppiare
         {
             cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: ";
@@ -330,18 +331,20 @@ int main()
             disegno_lepre (passi_lepre, passi_totali); //viene disegnata la lepre
             disegno_tarta (passi_tarta, passi_totali); //viene disegnata la tarta
 
-            Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
-            system("cls");
+            cout << endl;
             
             if (passi_tarta >= passi_totali/2 || passi_lepre >= passi_totali/2) //controlla se qualcuno è arrivato a metà
                 flag_meta = true; //aggiorna la variabile
             
-            if (flag_meta == true) //si può ripuntare solo se nessono è mai andato oltre la metà
+            if (flag_meta != true) //si può ripuntare solo se nessono è mai andato oltre la metà
             {
                 temp = scommessa_raddoppiata (scommessa, contagiri, credito); //temp assume il valore della riscommessa
                 scommessa += temp; //viene aggiornata la scommessa
                 credito -= temp; //viene aggiornato il credito
             }
+            
+            Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
+            system("cls");
 
         }
 
