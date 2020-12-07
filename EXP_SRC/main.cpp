@@ -285,6 +285,8 @@ int main()
 
         contagiri = 0;
         flag_meta = false;
+        passi_lepre = 0;
+        passi_tarta = 0;
         
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
