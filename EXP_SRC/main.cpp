@@ -243,20 +243,7 @@ int main()
         else
             cout << "Quanto vuoi scommettere sulla lepre?" << endl;
 
-        //il giocatore fa la puntata
-        cout << "Inserisci la scommessa in gettoni:  ";
-        cin >> scommessa;
-        //viene controllato il credito
-        while (credito_sufficiente (credito, scommessa) == false || positivo (scommessa) == false)
-        {
-            cout << endl;
-            cout << "Non fare il furbo! Inserisci una scommessa valida." << endl;
-            cout << "Il tuo credito vale " << credito << " gettoni." << endl;
-            cout << "Inserisci la scommessa in gettoni:  ";
-            cin >> scommessa;
-            cout << endl;
-        }
-
+        scommessa = puntata (credito); //la scommessa vine inserita tramite la funzione puntata
         credito -= scommessa;
 
         cout << "In bocca al lupo, buon divertimento!" << endl;
