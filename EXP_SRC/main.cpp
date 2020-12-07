@@ -163,7 +163,7 @@ int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
  }
 }
 
-int puntata (int credito)
+int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
 {
     int scommessa;
     //il giocatore fa la puntata
