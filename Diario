@@ -264,4 +264,5 @@ Parti da aggiungere:
  int contagiri; //Conta i giri di ogni giocata
  bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
  
+ Scrittura della parte grafica relativa ai casi in cui entrambe passino il traguardo [Ragnoli e Leporati]
 
