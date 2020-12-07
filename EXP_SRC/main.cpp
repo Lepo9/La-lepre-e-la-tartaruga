@@ -189,7 +189,7 @@ int scommessa_raddoppiata (int scommessa, int contagiri, int credito) //Funzione
     {
         if (scommessa * 2 > credito) //Controlla se ha abbastanza credito per raddoppiare
         {
-            cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: "
+            cout << "Non hai abbastanza credito per raddoppiare la scommessa, vuoi scommettere tutto il credito rimasto? Digita 1 ae vuoi scommettere tutto, altrimenti digita 0: ";
             scelta = scelta_binaria(); //Funzione che controlla se la scelta è 0 o 1
             if (scelta == 1) //Controlla se l'utente ha scelto 0 o 1
                 return credito; //Se è 1 scommette tutto il credito
@@ -240,7 +240,7 @@ int main()
     system ("cls");  //viene richiamata la funzione cls per cancellare la shell
 
     //Tutte le regole del gioco divise in Nome:Possibilità:Passi
-    cout << "Puoi scommettere su uno delle due concorrenti e puoi raddoppiare durante la gara ogni 15 turni prima che una delle due passi la metà del campo" << endl;
+    cout << "Puoi scommettere su uno delle due concorrenti e puoi raddoppiare durante la gara ogni 15 turni prima che una delle due passi mezzo campo." << endl;
     cout << "La tartaruga può fare le seguenti mosse: " << endl;
     cout << "Arrancata Rapida   : 50% di possibilità : 3 passi avanti" << endl;
     cout << "Scivolone          : 20% di possibilità : 6 passi indietro" << endl;
