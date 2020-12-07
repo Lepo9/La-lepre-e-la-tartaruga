@@ -79,6 +79,7 @@ int scommessa(gettoni)
 int scelta(0,1) (0 tartargura - 1 lepre)
 
 Aggiunta aggiustaento parte grafica del traguardo in caso di pareggio. [Leporati e Ragnoli]
+Rimozione della funzione gettoni vinti 
 
 Inserimento delle variabili e funizioni per la parte finale del ciclo responsabile delle partite:
   void guadagno (int credito_finale, int credito_iniziale) //stampa quanti gettoni si ha vinto dall'inizio o si ha perso
