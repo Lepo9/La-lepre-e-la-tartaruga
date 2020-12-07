@@ -281,7 +281,7 @@ int main()
 
         cout << "In bocca al lupo, buon divertimento!" << endl;
         system ("pause"); //viene richiamata la funzione pause per aspettare che l'utente sia pronto a giocare
-        system("cls"); //viene richiamata la funzione cls per cancellare la shell
+        system ("cls"); //viene richiamata la funzione cls per cancellare la shell
 
         contagiri = 0;
         flag_meta = false;
@@ -291,7 +291,13 @@ int main()
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
             contagiri++;
-            cout << "Il tuo credito vale " << credito << " gettoni." << endl << endl;
+            cout << "Il tuo credito vale " << credito << " gettoni." << endl;
+            cout << "Nel caso vincesse la ";
+            if (scelta == 0)
+                cout << "tartaruga";
+            else
+                cout << "lepre";
+            cout << "vinceresti " << scommessa << " gettoni." << endl << endl;
 
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
             passi_tarta += spostamento_tarta(); //aggiornamento del contatore dei passi della tarta
