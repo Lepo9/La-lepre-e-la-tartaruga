@@ -251,4 +251,4 @@ Parti da aggiungere:
  int puntata(int credito)
  int scelta_binaria()
  int scommessa_raddoppiata(int scommessa, int contagiri, int credito)
- 
+ int contagiri
