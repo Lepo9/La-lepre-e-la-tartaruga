@@ -50,3 +50,5 @@ int scelta_binaria() //Controlla se la scelta è 1 o 0
 int temp //Variabile temporanea
 
 int contagiri //Conta i giri di ogni giocata
+
+bool flag_50 = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
