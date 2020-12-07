@@ -297,7 +297,7 @@ int main()
                 cout << "tartaruga";
             else
                 cout << "lepre";
-            cout << "vinceresti " << scommessa << " gettoni." << endl << endl;
+            cout << " vinceresti " << scommessa << " gettoni." << endl << endl;
 
             passi_lepre += spostamento_lepre(); //aggiornamento del contatore dei passi della lepre
             passi_tarta += spostamento_tarta(); //aggiornamento del contatore dei passi della tarta
