@@ -246,6 +246,9 @@ Parti da aggiungere:
  Controllo scelta
  Controllo puntata
  
+ 
  Variabili:
  int puntata(int credito)
  int scelta_binaria()
+ int scommessa_raddoppiata(int scommessa, int contagiri, int credito)
+ 
