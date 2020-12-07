@@ -223,6 +223,7 @@ int main()
     int scommessa; //Gettoni scommessi
     int contagiri=0; //conta il numero di giri di una giocata
     int temp; //variabile temporanea
+    bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
 
     system ("title Enimol Game : Turtle VS Rabbit Edition!");//viene richiamta la funzione title per visualizzare il titolo sul Command Prompt
     cout << "Ciao!" << endl << "Benvenuto in Enimol Game : Turtle VS Rabbit edition!" << endl << endl;
@@ -239,6 +240,7 @@ int main()
     system ("cls");  //viene richiamata la funzione cls per cancellare la shell
 
     //Tutte le regole del gioco divise in Nome:Possibilità:Passi
+    cout << "Puoi scommettere su uno delle due concorrenti e puoi raddoppiare durante la gara ogni 15 turni prima che una delle due passi la metà del campo" << endl;
     cout << "La tartaruga può fare le seguenti mosse: " << endl;
     cout << "Arrancata Rapida   : 50% di possibilità : 3 passi avanti" << endl;
     cout << "Scivolone          : 20% di possibilità : 6 passi indietro" << endl;
@@ -281,7 +283,8 @@ int main()
         system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
         contagiri = 0;
-
+        flag_meta = false;
+        
         while (passi_lepre < passi_totali && passi_tarta < passi_totali) //ciclo stampa della corsa
         {
             contagiri++;
@@ -329,10 +332,16 @@ int main()
 
             Sleep (intervallo_fotogrammi); //la funzione aspetta intervallo_fotogrammi millisecondi
             system("cls");
-
-            temp = scommessa_raddoppiata (scommessa, contagiri, credito); //temp assume il valore della riscommessa
-            scommessa += temp; //viene aggiornata la scommessa
-            credito -= temp; //viene aggiornato il credito
+            
+            if (passi_tarta >= passi_totali/2 || passi_lepre >= passi_totali/2) //controlla se qualcuno è arrivato a metà
+                flag_meta = true; //aggiorna la variabile
+            
+            if (flag_meta == true) //si può ripuntare solo se nessono è mai andato oltre la metà
+            {
+                temp = scommessa_raddoppiata (scommessa, contagiri, credito); //temp assume il valore della riscommessa
+                scommessa += temp; //viene aggiornata la scommessa
+                credito -= temp; //viene aggiornato il credito
+            }
 
         }
 
