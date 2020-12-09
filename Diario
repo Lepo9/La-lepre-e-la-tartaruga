@@ -253,19 +253,24 @@ Parti da aggiungere:
   Aggiunta inizializzazione variabili a inizio partita.
   Risoluzione errori generale in campo semantico che non facevago partire alcune funzioni.
   Implementazione delle farie funzioni e variabil nel codice al fine di irrobustirlo.
- Cancellazione gettoni vinti
+ Cancellazione fella funzione gettoni_vinti
 
 
  Variabili e funzioni aggiunte:
 
- int puntata(int credito) //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
- int scelta_binaria(); //Controlla se la scelta è 1 o 0
+ int puntata(int credito) [Leporati] //Restituisce la scommessa dell'utente e controlla se questa sia plausibile 
+ int scelta_binaria(); [Betella] //Controlla se la scelta è 1 o 0
  int temp; //Variabile temporanea
  int contagiri; //Conta i giri di ogni giocata
  bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
- void guadagno() //Calcola il guadagno e controlla se il giocatore ha perso o ha guadagnato
+ void guadagno() //Calcola il guadagno e controlla se il giocatore ha perso o ha guadagnato [Garoffoli]
  int credito_iniziale; //è il credito che si aveva inserito all'inizio
  int contatore_vittorie = 0, contatore_sconfitte = 0; 
 
  Scrittura della parte grafica relativa ai casi in cui entrambe passino il traguardo [Ragnoli e Leporati]
+ Scrittura della parte relativa alla riscommessa [Ragnoli e Leporati]
+ Scrittura della parte relativa al "rigioco" [Leporati, Ragnoli e Garoffoli]
+ 
+ Aggiustamento complessivo e finiale dell'intero main, revisione e commento [Leporati e Garoffoli]
 
+*********************************
