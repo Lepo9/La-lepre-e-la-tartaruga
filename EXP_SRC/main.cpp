@@ -40,9 +40,7 @@ bool credito_sufficiente (int credito, int puntata)
 int spostamento_tarta ()
 {
     int n;  //variabile di appoggio
-
     n = rand () % 10 + 1;    //genera un numero da 1 a 10
-
     if (n <= 5)         //  5/10 possibilità sono il 50%
         return 3;       //  arrancata rapida
     else if (n <= 7)    //  2/10 possibilità sono il 20%
@@ -57,9 +55,7 @@ int spostamento_tarta ()
 int spostamento_lepre ()
 {
     int n;  //variabile di appoggio
-
     n = rand () % 10 + 1;    //genera un numero da 1 a 10
-
     if (n <= 2)         //  2/10 possibilità sono il 20%
         return 0;       //  dormita
     else if (n <= 4)    //  (4-2)/10 possibilità sono il 20%
@@ -138,10 +134,10 @@ void disegno_lepre (int avanzamento_lepre, int passi_totali)
     cout << "x" << endl;
 }
 
-int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
+int scelta_binaria() //funzione eseguita per input di 0 o 1
 {
   int n;
-  while(1 != 0) //ciclo infinito che esce solo se l'utente inserisce 0 o 1
+  while(1 != 0) //ciclo infinito che termina solo se l'utente inserisce 0 o 1
   {
   cin >> n;
    if(n == 0) //Controlla se la scelta è 0
@@ -149,7 +145,7 @@ int scelta_binaria() //Controlla se il numero inserito sia 0 o 1
    else if(n == 1) //Controlla se la scelta è 1
       return 1;
   cout << "Puoi inserire solo 0 o 1: ";
- }
+  }
 }
 
 int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
@@ -162,7 +158,7 @@ int puntata (int credito) //Restituisce la scommessa dell'utente e controlla se 
     while (credito_sufficiente (credito, scommessa) == false || positivo (scommessa) == false)
     {
         cout << endl;
-        cout << "Non fare il furbo! Inserisci una scommessa valida." << endl;
+        cout << "Attenzione! Inserisci una scommessa valida." << endl;
         cout << "Il tuo credito vale " << credito << " gettoni." << endl;
         cout << "Inserisci la scommessa in gettoni:  ";
         cin >> scommessa;
@@ -265,6 +261,11 @@ int main()
 
     cout << "Inserisci il tuo credito in gettoni: "; //input gettoni
     cin >> credito;
+    while(credito<=0)   //controllo input credito
+    {
+        cout << "Attenzione! Inserisci un credito valido (positivo): ";
+        cin >> credito;
+    }
     credito_iniziale = credito;
     system("cls"); //viene richiamata la funzione cls per cancellare la shell
 
@@ -274,7 +275,7 @@ int main()
         //il giocatore sceglie su chi puntaree
         cout << "Digita 0 se vuoi scommettere sula tartaruga oppure digita 1 se vuoi scommettere sulla lepre." << endl;
         cout << "La tua scelta e': " ;
-        scelta = scelta_binaria();
+        scelta = scelta_binaria(); //usiamo questa funzione di controllo
 
         if (scelta == 0)
             cout <<"Quanto vuoi scommettere sulla tartaruga?" << endl;
