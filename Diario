@@ -246,7 +246,7 @@ Parti da aggiungere:
  Controllo scelta [Garoffoli]
  Controllo puntata  [Betella]
  Controllo ripuntata [Betella e Leporati]
- 
+
  Sono stati implementati i commenti [Garoffoli]
  Sono state leggermente modificate le regole [Leporati]
  Modifica di parti del codice: [Leporati]
@@ -258,19 +258,35 @@ Parti da aggiungere:
 
  Variabili e funzioni aggiunte:
 
- int puntata(int credito) [Leporati] //Restituisce la scommessa dell'utente e controlla se questa sia plausibile 
+ int puntata(int credito) [Leporati] //Restituisce la scommessa dell'utente e controlla se questa sia plausibile
  int scelta_binaria(); [Betella] //Controlla se la scelta è 1 o 0
  int temp; //Variabile temporanea
  int contagiri; //Conta i giri di ogni giocata
  bool flag_meta = false; //la variabile cambia in true quando la tartaruga o la lepre fanno più di 50 passi
  void guadagno() //Calcola il guadagno e controlla se il giocatore ha perso o ha guadagnato [Garoffoli]
  int credito_iniziale; //è il credito che si aveva inserito all'inizio
- int contatore_vittorie = 0, contatore_sconfitte = 0; 
+ int contatore_vittorie = 0, contatore_sconfitte = 0;
 
  Scrittura della parte grafica relativa ai casi in cui entrambe passino il traguardo [Ragnoli e Leporati]
  Scrittura della parte relativa alla riscommessa [Ragnoli e Leporati]
  Scrittura della parte relativa al "rigioco" [Leporati, Ragnoli e Garoffoli]
- 
+
  Aggiustamento complessivo e finiale dell'intero main, revisione e commento [Leporati e Garoffoli]
 
 *********************************
+
+14/12/2020
+
+Disegnato la lepre e la tartaruga
+Scelto lo sfondo
+Disegnato il traguardo
+Copiato le funzioni che ci interessavano
+Copiato la parte del main che ci interessava
+Realizzazione progetto senza scritte
+
+*********************************
+
+15/12/2020
+
+Implementazione scritte per i casi di Vittoria
+Aggiunta titolo del gioco
